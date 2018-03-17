@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rock Paper Scissors</title>
+
+    <link rel="stylesheet" href="public/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Jumbotron -->
+        <div class="jumbotron" style="background-color: black; color: white">
+            <h1 class="text-center">Anytime is Train Time</h1>
+            <h3 class="text-center">Choo Choo Chee Chee</h3>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <!-- Current Employees-->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <strong>Current Train Schedule</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover" id='train-table'>
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency(minutes)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Add Employee  -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <strong>Add Train</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <!-- Entry Form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="train-name-input">Train Name</label>
+                                <input class="form-control" id="train-name-input" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination-input">Destination</label>
+                                <input class="form-control" id="destination-input" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="start-input">First Train (HH:mm - Military Time)</label>
+                                <input class="form-control" id="start-input" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency-input">Frequency</label>
+                                <input class="form-control" id="frequency-input" type="text">
+                            </div>
+                            <button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDFSijrt3R8CFcrdD_eOgGJgvF1jiS2UI0",
+        authDomain: "brendan-rps-multiplayer.firebaseapp.com",
+        databaseURL: "https://brendan-rps-multiplayer.firebaseio.com",
+        projectId: "brendan-rps-multiplayer",
+        storageBucket: "brendan-rps-multiplayer.appspot.com",
+        messagingSenderId: "868761424409"
+    };
+
+    firebase.initializeApp(config);
+</script>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="public/assets/javascript/moment.js"></script>
+<script src="public/assets/javascript/app.js"></script>
+
+
+</html>
