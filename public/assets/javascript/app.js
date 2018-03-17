@@ -21,9 +21,9 @@
     database.ref().push(newTrain);
   
     $("#train-name-input").val("");
-    $("#destination").val("");
+    $("#destination-input").val("");
     $("#start-input").val("");
-    $("#frequency").val("");
+    $("#frequency-input").val("");
   });
   
   database.ref().on("child_added", function(childSnapshot, prevChildKey) {
